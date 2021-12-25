@@ -1,16 +1,26 @@
+/* eslint-disable import/no-unresolved */
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
+import Nav from './components/Nav';
+import Home from './pages/Home';
+import Starred from './pages/Starred';
 
 function App() {
   return (
-    <Switch>
-      <Route exact path="/">
-        This is home page{' '}
-      </Route>
-      <Route exact path="/starred">
-        This is starred page
-      </Route>
-    </Switch>
+    <div>
+      <Nav />
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route exact path="/starred">
+          <Starred />
+        </Route>
+        <Route>
+          <div>Page not found</div>
+        </Route>
+      </Switch>
+    </div>
   );
 }
 
