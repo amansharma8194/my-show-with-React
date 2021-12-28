@@ -72,7 +72,7 @@ function Home() {
           />
         </label>
       </div>
-      <button type="button" onMouseEnter={OnSearch}>
+      <button type="button" onClick={OnSearch}>
         Search
       </button>
       {renderResults()}
