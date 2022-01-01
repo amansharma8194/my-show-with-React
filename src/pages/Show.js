@@ -12,8 +12,7 @@ import { InfoBlock, ShowPageWrapper } from './show.styled';
 function Show() {
   const { id } = useParams();
   const { show, isLoading, error } = DisplayShow(id);
-  // eslint-disable-next-line
-  console.log(show);
+
   if (isLoading) {
     return <div>Data is being Loaded</div>;
   }

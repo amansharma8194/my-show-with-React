@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
 import { Star } from '../styled';
 import { StyledShowCard } from './showCard.styled';
@@ -7,7 +7,8 @@ function ShowCard({ id, image, name, summary, onStarClick, isStarred }) {
   const summaryAsText = summary
     ? `${summary.split(' ').slice(0, 10).join(' ').replace(/<.+?>/g, '')}...`
     : 'No description';
-
+  // eslint-disable-next-line
+  console.log('render');
   return (
     <StyledShowCard>
       <div className="img-wrapper">
@@ -27,4 +28,4 @@ function ShowCard({ id, image, name, summary, onStarClick, isStarred }) {
     </StyledShowCard>
   );
 }
-export default ShowCard;
+export default memo(ShowCard);

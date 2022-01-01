@@ -6,7 +6,7 @@ import Title from './Title';
 const Mainpage = ({ children }) => {
   return (
     <div>
-      <Title title="My-SHOW" subtitle="are you looking for a show or actor" />
+      <Title title="My-ShOw" subtitle="Are you looking for a show or actor?" />
       <Nav />
       {children}
     </div>
