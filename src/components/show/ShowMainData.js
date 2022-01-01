@@ -4,7 +4,7 @@ import IMG_PLACEHOLDER from '../images/not-found.png';
 import { Star } from '../styled';
 import { Headline, MainDataWrapper, TagList } from './show.MainData.styled';
 
-const ShowMainData = ({ name, rating, summary, tags, image }) => {
+const ShowMainData = ({ image, name, rating, summary, tags }) => {
   return (
     <MainDataWrapper>
       <img src={image ? image.original : IMG_PLACEHOLDER} alt="show-cover" />

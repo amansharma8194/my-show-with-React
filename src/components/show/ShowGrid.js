@@ -12,6 +12,7 @@ const ShowGrid = ({ Data }) => {
     <FlexGrid>
       {Data.map(({ show }) => {
         const isStarred = starredShows.includes(show.id);
+
         const onStarClick = () => {
           if (isStarred) {
             starredDispatch({ type: 'REMOVE', showId: show.id });
